@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .checkout-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .checkout-header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        .checkout-items {
+            padding: 20px;
+        }
+        .checkout-item {
+            margin-bottom: 20px;
+        }
+        .checkout-item label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        .checkout-item input[type="number"] {
+            width: 50px;
+            height: 30px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+        .checkout-total {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .checkout-button {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+        }
+        .checkout-button:hover {
+            background-color: #3e8e41;
+        }
+    </style>
+</head>
+<body>
+    <div class="checkout-container">
+        <div class="checkout-header">
+            <h2>Checkout</h2>
+        </div>
+        <div class="checkout-items">
+            <div class="checkout-item">
+                <label>Item 1</label>
+                <input type="number" value="1" min="1">
+            </div>
+            <div class="checkout-item">
+                <label>Item 2</label>
+                <input type="number" value="1" min="1">
+            </div>
+            <div class="checkout-item">
+                <label>Item 3</label>
+                <input type="number" value="1" min="1">
+            </div>
+            <div class="checkout-total">
+                Total: ₹<span id="total">0</span>
+            </div>
+            <button class="checkout-button">Place Order</button>
+        </div>
+    </div>
+</body>
+</html>

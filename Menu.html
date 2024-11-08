@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            background-color:#35424a;
+            color: lightyellow;
+            padding: 20px;
+            letter-spacing: 2px;
+            text-align: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        header h1 {
+            text-shadow: 2px 2px #7b436f;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 50px;
+        }
+        nav a {
+            text-decoration: none;
+            color: lightyellow;
+            font-weight: bold;
+        }
+        nav a:hover{
+            color:  #7b436f;
+        }
+        .food {
+            background-color: blanchedalmond;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+            gap: 20px;
+            padding: 20px;
+            justify-items: center;
+           
+        }
+        .a {
+            display: flexbox;
+            text-align: center;
+            background-color: rgb(221, 178, 123);
+            color: black;
+            text-align: start;
+            object-position:100px;
+            padding: 20px;
+            border-radius: 10px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+            transition: transform 0.3s; 
+         
+        }
+        .a:hover {
+            transform: scale(1.05); 
+        }
+        footer {
+            background-color: #35424a;
+            color: lightyellow;
+            text-align: center;
+            padding: 15px 0;
+            position: relative;
+            width: 100%; 
+            margin-bottom: auto;
+            margin-top: 0px;
+        }
+        .order-button {
+            margin-top: 20px;
+            padding: 15px 30px; 
+            background-color: lightgreen;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px; 
+            font-weight: bold; 
+            transition: background-color 0.3s;
+           
+            
+           
+        }
+        .order-button:hover {
+            background-color: darkgreen; 
+            color: white; 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Menu</h1>
+        <br>
+        <nav>
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+               <li><a href="About.html">About Us</a></li>
+               <li><a href="Menu.html">Menu</a></li>
+               <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="section-a">
+        <form action="checkout.html" method="POST">
+            <div class="food">
+                <div class="a">
+                    <img src="indian-veg-food.webp" alt="Veg" width="180" height="180">
+                    <h2 style="text-align: center;">Veg</h2><br>
+                    <label><input type="checkbox" name="food[]" value="Kadhai Paneer - ₹299"> Kadhai Paneer - ₹299</label><br>
+                    <label><input type="checkbox" name="food[]" value="Naan - ₹30"> Naan - ₹30</label><br>
+                    <label><input type="checkbox" name="food[]" value="Shahi Paneer - ₹210"> Shahi Paneer - ₹210</label><br>
+                    <label><input type="checkbox" name="food[]" value="Malai Kofta - ₹110"> Malai Kofta - ₹110</label><br>
+                    <label><input type="checkbox" name="food[]" value="Thali - ₹120"> Thali - ₹120</label><br>
+                    <label><input type="checkbox" name="food[]" value="Aloo P uri - ₹90"> Aloo Puri - ₹90</label><br>
+                    <label><input type="checkbox" name="food[]" value="Veg Manchurian"> Veg Manchurian</label>
+                </div>
+                <div class="a">
+                    <img src="chicken.jpg" alt="Non-Veg" width="200" height="200">
+                    <h2 style="text-align: center;">Non-Veg</h2><br>
+                    <label><input type="checkbox" name="food[]" value="Kadhai Chicken - ₹220"> Kadhai Chicken - ₹220</label><br>
+                    <label><input type="checkbox" name="food[]" value="Chicken Tanduri - ₹200"> Chicken Tanduri - ₹200</label><br>
+                    <label><input type="checkbox" name="food[]" value="Chicken Malai Tikka - ₹240"> Chicken Malai Tikka - ₹240</label><br>
+                    <label><input type="checkbox" name="food[]" value="Mutton Handi - ₹340"> Mutton Handi - ₹340</label><br>
+                    <label><input type="checkbox" name="food[]" value="Mutton Kosha - ₹380"> Mutton Kosha - ₹380</label><br>
+                    <label><input type="checkbox" name="food[]" value="Biryani - ₹180"> Biryani - ₹180</label><br>
+                    <label><input type="checkbox" name="food[]" value="Chicken 65 - ₹150"> Chicken 65 - ₹150</label>
+                </div>
+                <div class="a">
+                    <img src="dessert.webp" alt="Desserts" width="180" height="180">
+                    <h2 style="text-align: center;">Desserts</h2><br>
+                    <label><input type="checkbox" name="food[]" value="Ice cream - ₹30"> Ice cream - ₹30</label><br>
+                    <label><input type="checkbox" name="food[]" value="Pastry - ₹40"> Pastry - ₹40</label><br>
+                    <label><input type="checkbox" name="food[]" value="Sweets - ₹15"> Sweets - ₹15</label><br>
+                    <label><input type="checkbox" name="food[]" value="Chocolate Fudge - ₹90"> Chocolate Fudge - ₹90</label><br>
+                    <label><input type="checkbox" name="food[]" value="Hazelnut Cheesecake - ₹190"> Hazelnut Cheesecake - ₹190</label><br>
+                    <label><input type="checkbox" name="food[]" value="Pancake - ₹80"> Pancake - ₹80</label><br>
+                    <label><input type="checkbox" name="food[]" value="Choco Waffles - ₹60"> Choco Waffles - ₹60</label>
+                </div>
+                <div class="a">
+                    <img src="Beverages.jpg" alt="Beverages" width="200" height="200">
+                    <h2 style="text-align: center;">Beverages</h2><br>
+                    <label><input type="checkbox" name="food[]" value="Milk Shake - ₹60"> Milk Shake - ₹60</label><br>
+                    <label><input type="checkbox" name="food[]" value="Tea - ₹20"> Tea - ₹20</label><br>
+                    <label><input type="checkbox" name="food[]" value="Lemon Tea - ₹30"> Lemon Tea - ₹30</label><br>
+                    <label><input type="checkbox" name="food[]" value="Coffee - ₹40"> Coffee - ₹40</label><br>
+                    <label><input type="checkbox" name="food[]" value="Cold Coffee - ₹60"> Cold Coffee - ₹60</label><br>
+                    <label><input type="checkbox" name="food[]" value="Shakes - ₹60"> Shakes - ₹60</label><br>
+                    <label><input type="checkbox" name="food[]" value="Cold Drinks - ₹20"> Cold Drinks - ₹20</label>
+                </div>
+                <button class="order-button" type="submit">Order Now</button>
+            </div>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Heavenly Cuisine. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
